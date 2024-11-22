@@ -31,7 +31,19 @@ document.getElementById("addContact").addEventListener("click", () => {
 // SOS Button
 document.getElementById("sos-button").addEventListener("click", () => {
   alert("SOS alert sent to emergency responders!");
-  // Add backend messaging API integration here.
+
+  // Capture the screenshot
+  html2canvas(document.body).then(canvas => {
+    const imgData = canvas.toDataURL("image/png");
+
+    // Automatically download the screenshot
+    const link = document.createElement("a");
+    link.href = imgData;
+    link.download = "screenshot.png";
+    link.click();
+
+    // You can also send `imgData` to the server using an API request
+  });
 });
 
 // Initialize Google Maps with User's Live Location

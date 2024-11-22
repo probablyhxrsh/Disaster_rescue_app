@@ -1,0 +1,259 @@
+/* General Styling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6; /* Light neutral background for contrast */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Full height layout */
+  overflow: hidden; /* Prevent scrolling for mobile-like design */
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ff7f50, #fc4a1a); /* Vibrant gradient */
+  color: white;
+  width: 100%;
+  max-width: 420px; /* Ensure header width aligns with content */
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 15px; /* Soft rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+}
+
+/* Main Sections */
+main {
+  margin-top: 90px; /* Offset for header */
+  margin-bottom: 90px; /* Offset for footer */
+  width: 100%;
+  max-width: 420px; /* Ensure main content aligns with header */
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  box-sizing: border-box;
+}
+
+/* Styling the navbar */
+.navbar {
+  background-color: #333; /* Background color of the nav section */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px; /* Align navbar with the main content */
+  border-radius: 15px 15px 0 0; /* Rounded top corners */
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1); /* Elegant shadow for navbar */
+}
+
+/* Styling each nav item */
+.nav-item {
+  color: white; /* Default text color */
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  text-decoration: none;
+  flex: 1; /* Ensures each item takes up equal space */
+}
+
+/* Change color of text and background when hovering */
+.nav-item:hover {
+  color: #ffcc00; /* Color on hover */
+  background-color: #555; /* Background color on hover */
+}
+
+/* Change color of text and background when the nav item is active (clicked) */
+.nav-item:active {
+  color: #ffcc00; /* Active text color */
+  background-color: #444; /* Active background color */
+}
+
+/* Optionally, change the navbar background color on hover */
+.navbar:hover {
+  background-color: #444; /* Navbar background color on hover */
+}
+
+/* Optional: Changing color for better visibility when the nav item is focused */
+.nav-item:focus {
+  outline: none; /* Removing the default focus outline */
+  color: #ffcc00;
+  background-color: #555;
+}
+
+/* Camera Section */
+#camera-container {
+  width: 100%;
+  height: 220px;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+#camera {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contacts Section */
+.contacts-section {
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+}
+
+.contacts-section h2 {
+  font-size: 1.4rem;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #fc4a1a; /* Accent line for style */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight inner shadow */
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #fc4a1a;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(252, 74, 26, 0.4); /* Glowing effect */
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: white;
+  background: linear-gradient(90deg, #28a745, #20c997); /* Vibrant green gradient */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #218838, #17a589);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
+}
+
+/* SOS Button */
+#sos-button {
+  margin: 20px auto;
+  display: block;
+  background: linear-gradient(90deg, #ff4d4d, #ff0000); /* Bold red gradient */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#sos-button:hover {
+  background: linear-gradient(90deg, #e60000, #b30000); /* Deeper red */
+  transform: scale(1.05);
+}
+
+/* Google Maps Section */
+#map-container {
+  padding: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  border: 2px solid #eee;
+}
+
+/* Floating Navigation Icons */
+.nav-item {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.nav-item.active {
+  color: #ff7f50;
+}
+
+.nav-item i {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover i {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.2rem;
+  }
+
+  #camera-container {
+    height: 200px;
+  }
+
+  #map {
+    height: 200px;
+  }
+
+  button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  #sos-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

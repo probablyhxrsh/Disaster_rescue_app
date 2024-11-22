@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Rescue Application</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGCoe3KMczjQ18_zPwAPIsgqlaA95RFvA&libraries=places" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    Disaster Rescue Application
+  </header>
+  <main>
+
+    <!-- Camera Section -->
+    <section id="camera-container" aria-label="Live Camera Feed">
+      <video id="camera" autoplay></video>
+    </section>
+
+    <!-- Add Emergency Contacts -->
+    <section id="contacts-section" aria-label="Emergency Contacts">
+      <h2>Add Emergency Contacts</h2>
+      <div class="form-group">
+        <input type="text" id="contactName" placeholder="Enter Contact Name" aria-label="Contact Name">
+        <input type="tel" id="contactNumber" placeholder="Enter 10-Digit Phone Number" aria-label="Phone Number">
+        <button id="addContact">Add Contact</button>
+      </div>
+      <ul id="contactList" aria-label="Contact List"></ul>
+    </section>
+
+    <!-- SOS Button -->
+    <section id="sos-section" aria-label="SOS">
+      <button id="sos-button" aria-label="Send SOS">Send SOS</button>
+    </section>
+
+    <!-- Google Maps -->
+    <section id="map-container" aria-label="Emergency Services Map">
+      <h2>Nearest Emergency Services</h2>
+      <div id="map" style="height: 400px;"></div>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="navbar" aria-label="Bottom Navigation">
+    <a href="#camera-container" class="nav-item" id="home-nav" tabindex="0">
+      <i class="icon-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#camera-container" class="nav-item" id="camera-nav" tabindex="0">
+      <i class="icon-camera"></i>
+      <span>Camera</span>
+    </a>
+    <a href="#map-container" class="nav-item" id="map-nav" tabindex="0">
+      <i class="icon-map"></i>
+      <span>Map</span>
+    </a>
+    <a href="#contacts-section" class="nav-item" id="contacts-nav" tabindex="0">
+      <i class="icon-contacts"></i>
+      <span>Contacts</span>
+    </a>
+    <a href="#sos-section" class="nav-item" id="sos-nav" tabindex="0">
+      <i class="icon-sos"></i>
+      <span>SOS</span>
+    </a>
+  </nav>
+</body>
+</html>
